@@ -1,6 +1,7 @@
 *{
   margin: 0;
   padding: 0;
+  font-size: 0;
 }
 
 
@@ -9,38 +10,56 @@
   justify-content: center;
   align-items: center;
   height: 100vh;
+  /* transform: rotate(-20deg); */
+  background-color: black;
+
 }
+
+ .water{
+  width: 80%;
+  height: 80%;
+  background-color: rgb(16, 72, 254);
+  position: absolute;
+} 
+
+.whale{
+  filter: blur(20px);
+}
+
 .div1{
     width: 100px;
     height: 400px;
-    background-color: gray;
     clip-path: polygon(50% 18.75%, 100% 18.75%, 100% 50%, 25% 31.25%);
+    position: relative;
+    animation-delay: 0.5s;
   }
 
 .div2{
   width: 100px;
   height: 400px;
-  background-color: gray;
   clip-path: polygon(0% 18.75%, 100% 18.75%, 100% 75%, 0% 50%);
+  position: relative;
+  animation-delay: 1s;
 }
 
 
 .div3{
   width: 100px;
   height: 400px;
-  background-color: gray;
   clip-path: polygon(0% 18.75%, 100% 25%, 100% 87.5%, 0% 75%);
+  position: relative;
+  animation-delay: 1.5s;
 }
 
 .div4-0{
   position: relative;
+  animation-delay: 2s;
 
 }
 
 .div4{
   width: 100px;
   height: 400px;
-  background-color: gray;
   clip-path: polygon(0% 25%, 100% 26.5625%, 100% 92%, 0 87.5%);
 }
 
@@ -48,7 +67,6 @@
 .div4-1{
   width: 100px;
   height: 200px;
-  background-color: gray;
   clip-path: polygon(0% 25%, 62.5% 25%, 50% 62.5%, 50% 75%, 25% 68.75%, 0% 50%);
   position: absolute;
   top: 75%;
@@ -56,13 +74,12 @@
 
 .div5-0{
   position: relative;
-
+  animation-delay: 2.5s;
 }
 
 .div5{
   width: 100px;
   height: 400px;
-  background-color: gray;
   clip-path: polygon(0 26.5625%, 100% 28.125%, 100% 92.1875%, 50% 93.75%, 0 92%);
 }
 
@@ -70,7 +87,6 @@
 .div5-1{
   width: 200px;
   height: 200px;
-  background-color: gray;
   clip-path: polygon(0% 25%, 50% 25%, 68.75% 75%, 82.25% 93.75%, 68.75% 100%, 50% 93.75%, 25% 75%);
   position: absolute;
   top: 75%;
@@ -80,59 +96,102 @@
 .div6{
   width: 100px;
   height: 400px;
-  background-color: gray;
   clip-path: polygon(0% 28.125%, 100% 29.6875%, 100% 89.0625%, 0% 92.1875%);
+  position: relative;
+  animation-delay: 3s;
 }
 
 
 .div7{
   width: 100px;
   height: 400px;
-  background-color: gray; 
   clip-path: polygon(0 29.6875%, 100% 31.25%, 100% 81.25%, 50% 87.5%, 0 89.0625%);
+  position: relative;
+  animation-delay: 3.5s;
 }
 
 
 .div8{
   width: 100px;
   height: 400px;
-  background-color: gray;
   clip-path: polygon(0% 31.25%, 100% 27.25%, 100% 68.75%, 0% 81.25%);
+  position: relative;
+  animation-delay: 4s;
 }
 
 
 .div9{
   width: 100px;
   height: 400px;
-  background-color: gray;
-  clip-path: polygon(0 27.25%, 50% 25%, 100% 21.875%, 100% 50%, 0 68.75%);}
+  clip-path: polygon(0 27.25%, 50% 25%, 100% 21.875%, 100% 50%, 0 68.75%);
+  position: relative;
+  animation-delay: 4.5s;
+}
 
 
 .div10{
   width: 100px;
   height: 400px;
-  background-color: gray;
   clip-path: polygon(0 21.875%, 50% 18.75%, 100% 6.25%, 100% 35%, 87.5% 34.35%, 0% 50%);
+  position: relative;
+  animation-delay: 5s;
 }
 
 
 .div11{
   width: 100px;
   height: 400px;
-  background-color: gray;
   clip-path: polygon(0% 6.25%, 50% 0%, 37.5% 6.25%, 37.5% 17.1875%, 100% 19%, 100% 34.375%, 50% 37.5%, 0% 35%);
+  position: relative;
+  animation-delay: 5.5s;
 }
 
 
 .div12{
   width: 100px;
   height: 400px;
-  background-color: gray;
   clip-path: polygon(0% 19%, 37.5% 20.3125%, 75% 18.75%, 25% 31.25%, 0 34.375%);
+  position: relative;
+  animation-delay: 6s;
 }
 
+.div1,
+.div2,
+.div3,
+.div4-0,
+.div5-0,
+.div6,
+.div7,
+.div8,
+.div9,
+.div10,
+.div11,
+.div12{
+  display: inline-block;
+  top: 0%;
+}
 
+.div1,
+.div2,
+.div3,
+.div4-1,
+.div4,
+.div5-1,
+.div5,
+.div6,
+.div7,
+.div8,
+.div9,
+.div10,
+.div11,
+.div12{
+  animation: move ease-in-out 10s infinite;
+  background-color: rgb(48, 48, 48);
+}
 
+@keyframes move {
+  0%{top: 0%;}
+  35%{top: 4%;}
+  100%{top: 0%;}
 
-
-/* transparent */
+}
